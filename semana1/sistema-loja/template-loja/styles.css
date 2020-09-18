@@ -1,0 +1,196 @@
+* {
+
+    margin: 0;
+    padding: 0;
+
+}
+
+body { 
+
+        background-color: #ffffff;
+        font-family: "Crimson Text", serif;
+        font-size: 18px;
+}
+
+
+
+.add-produto {
+
+    text-align: center;
+    margin: 20px;
+    color: #FFB6C1;
+    
+
+}
+
+.labels {
+
+    padding: 30px;
+    text-align: center;
+
+}
+    input[type=url] {
+    
+    padding: 5px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #555;
+    outline: none;
+    }
+
+    input[type=text] {
+    
+        padding: 5px;
+        margin: 4px 0;
+        box-sizing: border-box;
+        border: 1px solid #555;
+        outline: none;
+        }
+    input[type=float] {
+    
+        padding: 5px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: 1px solid #555;
+        outline: none;
+        }
+
+        input[type=number] {
+    
+            padding: 5px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 1px solid #555;
+            outline: none;
+            }
+        
+.lindos-h2 {
+
+text-align: center;
+color:#FFB6C1;
+
+
+}
+
+.navebar {
+
+background: #f5f5f5;
+text-decoration-color: #000000;
+padding:10px;
+margin-bottom: 50px;
+text-align: center;
+
+}
+
+.titulo-pagina {
+
+text-align:center;
+
+}
+
+.msg-de-amor {
+    
+    
+        background-color: #f5f5f5;
+        padding:20px 30px 50px 40px;
+        text-align: center;
+        margin-top: 60px;
+        
+    }
+
+.tabela {
+
+    text-align: center;
+    vertical-align:middle;
+    display:table-cell;
+
+
+}
+
+ul {
+
+    text-align: center;
+    padding: 20px;
+    }
+
+li {
+
+    text-align: center;
+    margin:5px;
+    padding: 5px;
+    
+}
+
+td {
+
+    text-align: center;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+th {
+
+    text-align: center;
+    padding: 30px;
+    
+}
+
+
+
+
+
+
+.tabela-produtos {
+
+    padding: 10px;
+    border-spacing: 20px;
+}
+
+
+.ctrl-estoque {
+
+
+    text-align: center;
+    margin: 20px;
+
+}
+
+.redes-sociais {
+
+    margin-top:50px;
+
+}
+
+a:link, a:visited {
+    text-decoration: none
+    
+	}
+a:hover {
+	color:#FFB6C1;
+	}
+
+a:active {
+    
+    text-decoration: none
+
+	}
+
+	.link {
+
+        color: #000000;
+        padding: 20px;
+
+    }
+
+
+    #footer {
+
+        background-color: #FFB6C1;
+        text-align: center;
+        padding:5px;
+        position:absolute;
+        bottom:0; 
+        width:100%;
+        margin-top: 10px;
+    }
+
