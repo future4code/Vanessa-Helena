@@ -105,11 +105,13 @@ div img {
 
 div:nth-child(2),
 div:last-child {
-    text-align: center;
+    
 }
 
 table {
     width: 60%;
+    margin-left:300px;
+
 }
 
 td button {
@@ -123,8 +125,11 @@ td button {
 .container-do-search {
     margin-top: 20px;
     height: 100px;
-}
+    
+    
 
+
+}
 
 #back-button {
     background-color: white;
