@@ -82,6 +82,7 @@ div img {
 #container-para-comprar>p {
     color: #c44f00;
     padding: 100px 0;
+    display:block;
     font-size: 60px;
 }
 
