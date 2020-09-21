@@ -18,14 +18,16 @@ h2 {
 
 input {
     height: 20px;
-    width: 500px;
+    width: 400px;
+    border:none;
+    border-bottom-style: solid;
 }
+
+
 
 button:focus {
     color: white;
     
-
-
 }
 
 img {
@@ -64,6 +66,8 @@ div img {
 }
 
 .icone {
+    
+    width: 15px;
     height: 15px;
 }
 
@@ -83,8 +87,6 @@ div img {
 #container-de-descricao>ol {
     padding: 15px 0px;
     margin-top: 10px;
-    
-   
     
 }
 
@@ -127,17 +129,18 @@ td button {
     color: black;
 }
 
-
-.container-do-search {
-    margin-top: 20px;
-    height: 100px;
-    margin-left: 50px;
-}
-
 td button:hover {
 
     background-color: #e7eb90;
 }
+
+.container-do-search {
+    margin-top: 20px;
+    height: 100px;
+    margin-left: 450px;
+}
+
+
 
 #back-button {
     background-color: white;
