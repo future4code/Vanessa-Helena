@@ -1,0 +1,52 @@
+body {
+
+padding:0;
+margin:0;
+
+
+
+}
+
+
+header {
+
+    height: 100%;
+    margin-bottom:30px;
+    padding:30px;
+    background-color: coral;
+
+
+}
+
+
+#main-container {
+
+display:flex;
+flex-wrap: wrap;
+max-width: 800px;
+margin:0 auto;
+    
+}
+
+.video1-4 {
+
+    flex: 100px;
+    border:solid 1px;
+    box-shadow: 10px 10px 10px 5px rgb(160, 138, 138);
+    width: 250px;
+    height: 200px;
+    margin: 40px;
+}
+
+.video5-8 {
+
+    flex: 100px;
+    border:solid 1px;
+    box-shadow: 10px 10px 10px 5px rgb(160, 138, 138);
+    width: 250px;
+    height: 200px;
+    margin: 40px;
+
+
+
+}
