@@ -27,8 +27,6 @@ comidaUsuario = prompt("Digite sua comida preferida aqui")
 comidasPreferidas[1] = comidaUsuario 
 console.log(comidasPreferidas);
 
-*/
-
 
 let perguntas = ["Você usa máscara de dormir?", "Você escova os dentes todos os dias?", "Quando chove, você usa guarda chuva?"];
 let respostas = [false, true, true] 
@@ -37,4 +35,4 @@ console.log("Você usa máscara de dormir", respostas[0])
 console.log("Você escova os dentes todos os dias", respostas[1])
 console.log("Quando chove, você usa guarda chuva", respostas[2])
 
-
+*/
