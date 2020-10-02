@@ -11,6 +11,9 @@
  * 
  */
 
+
+
+/**
 console.log("Bem vindo ao jogo de Blackjack!");
 
 let jogadaUsuario;
@@ -46,3 +49,5 @@ else {
   console.log("O jogo acabou!");
 
 }
+
+ */
