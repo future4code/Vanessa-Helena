@@ -110,8 +110,56 @@ doisNumeros(15, 5);
 // c.
 
 //function mensagem(palavra) {
-  //for (let i = 0; i < 10; i++) console.log(palavra);
+//for (let i = 0; i < 10; i++) console.log(palavra);
 //}
 //mensagem("olá");
 
 //----------------------------------------------------------------------------------------------------
+
+// EXERCÍCIO 6
+
+//const array = [10, 23, 45, 78, 90, 52, 35, 67, 84, 22];
+
+// a.
+
+//const arrayNumeros = (array) => {
+//console.log(array.length);
+//};
+//arrayNumeros(array);
+
+//---------------------------------------------------------------------------------------------------
+
+// b.
+
+/*
+let numeroPar = (numero) => {
+  if (numero % 2 === 0) {
+    console.log("Esse número é par", numero);
+  } else {
+    console.log("É ímpar", numero);
+  }
+};
+numeroPar(2);
+*/
+
+//----------------------------------------------------------------------------------------------------
+
+// c.
+
+/*  // NÃO CONSEGUI FAZER
+const array = [10, 23, 45, 78, 90, 52, 35, 67, 84, 22];
+
+let quantPares = (array) => {
+  for (let i = 0; i < array; i++);
+  {
+    if (array % 2 === 0) {
+      console.log("É par", array[i]);
+    }
+  }
+};
+quantPares(array);
+*/
+
+//--------------------------------------------------------------------------------------------------- 
+
+// d. Esse dependia do outro então não consegui fazer também.
