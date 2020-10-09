@@ -22,3 +22,82 @@
 
 //------------------------------------------------------------------------------------------------------
 
+// Exercícios de lógica de programação 
+
+// 1. Através do While, do for e do for of 
+
+//let variasCoisas = ["Vanessa", "Carol", 1, 2, 7, 8]
+
+//for(let i = 0 ; i < variasCoisas.length; i++)
+    //console.log(variasCoisas)
+
+// 2.
+
+    // A -> false
+    // B -> false
+    // C -> true
+    // D -> true
+    // E -> true
+
+// 3. 
+
+// Dá forma que ele tá não rodaria pois eu preciso dizer a quantidade que eu quero que o programe rode
+//ou seja nesse caso =[5]
+
+//const quantidadeDeNumerosPares=[5]
+//let i = 0
+//while(i < quantidadeDeNumerosPares) {
+  //console.log(i*2)
+  //i++
+//}
+
+// 4. 
+
+//function trigonometria (a, b, c) {
+        //if ( a === b && b === c){
+            //console.log("Triângulo Equilátero");      
+        //}else if(a !== b && b !== c && c !== a){
+            //console.log("Triângulo Escaleno!"); 
+        //}else{
+            //console.log("Triângulo Isósceles");
+        //}
+    //}
+    
+    //trigonometria(12, 12, 14);
+
+    // 5. 
+
+   // function numeros(numero1, numero2) {
+     // if (numero1 > numero2) {
+       // console.log("é o maior:", numero1);
+      //}
+     // if (numero2 > numero1) {
+      //  console.log("é o maior", numero2);
+     // }
+    //}
+    //numeros(8, 1);
+
+    //function numeros(numero1, numero2) {
+
+        //if (numero1 % numero2 === 0) {
+          //  console.log(`${numero1} é divisivel por: ${numero2}´);
+
+       // }
+
+  //  }
+
+  //function numeros (numero1, numero2) {
+
+   // if (numero1 % numero2 === 0) {
+      //  console.log(numero1 + "é divisível por: " + numero2)
+   // }else {
+       // console.log(numero2 + "não é divisível por: "+ numero1) 
+
+    //}
+    //}
+  
+
+
+
+
+//numeros(15, 30)
