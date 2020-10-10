@@ -109,3 +109,37 @@ numeros(800, 250);
 
 //-------------------------------------------------------------------------------------------------------
 
+// Exercícios de funções
+
+// 1.
+
+/*
+function arrayDeNumeros(listaDeNumeros) {
+    let maior = 0 
+    let segundoMaior = 0
+    let listaVazia = []
+
+ 
+    for (let i = 0; i < listaDeNumeros.length; i++) {
+        if (listaDeNumeros[i] > maior ) {
+           maior = listaDeNumeros[i];
+            listaVazia.push(maior)
+        }
+     } 
+        listaDeNumeros[i]
+      
+
+
+    
+
+ console.log("O primeiro maior número da lista é: " + maior)
+ 
+
+
+}
+    
+      
+let listaDeNumeros = [1, 2, 3, 4, 10000, 600, 7, 8, 9, 10];
+
+arrayDeNumeros(listaDeNumeros); 
+*/
