@@ -111,35 +111,122 @@ numeros(800, 250);
 
 // Exercícios de funções
 
-// 1.
+// 1.   OBS: SÓ CONSEGUI ENCONTRAR O PRIMEIRO NÚMERO MAIOR E O SEGUNDO MAIOR O MENOR EU TENTEI USAR A MESMA
+// LÓGICA DO NÚMERO MAIOR, MAS NÃO CONSEGUI.
 
 /*
 function arrayDeNumeros(listaDeNumeros) {
-    let maior = 0 
-    let segundoMaior = 0
-    let listaVazia = []
+  let maior = 0;
+  let listaVazia = []
+  let segundoMaior = 0
+  let segundoMenor = 0
+  let menor = 0
+  let posicao = 0;
 
- 
-    for (let i = 0; i < listaDeNumeros.length; i++) {
-        if (listaDeNumeros[i] > maior ) {
-           maior = listaDeNumeros[i];
-            listaVazia.push(maior)
-        }
-     } 
-        listaDeNumeros[i]
+  for (let i = 0; i < listaDeNumeros.length; i++) {
+    if (listaDeNumeros[i] > maior) {
+      maior = listaDeNumeros[i]
+      posicao = i
+    }
+  }
+  listaDeNumeros.splice(posicao, 1)
+  console.log(listaDeNumeros)
+  listaVazia = listaDeNumeros
+  
+  for (let i = 0; i < listaVazia.length; i++) {
+    if (listaVazia[i] > segundoMaior) {
+      segundoMaior = listaVazia[i]
       
+    }
+  }
 
-
-    
-
- console.log("O primeiro maior número da lista é: " + maior)
- 
-
-
+  //console.log("O segundo maior número da lista é: " + segundoMaior);
+  
 }
-    
-      
+
 let listaDeNumeros = [1, 2, 3, 4, 10000, 600, 7, 8, 9, 10];
 
-arrayDeNumeros(listaDeNumeros); 
+arrayDeNumeros(listaDeNumeros);
+*/
+
+// 2.
+
+//const nomeEscola = function() {
+//alert("Hello, Future4 ")
+//}
+//const nome = nomeEscola()
+
+//------------------------------------------------------------------------------------------------------
+
+// Exercícios de objetos
+
+// 1. Array é uma variável especial em que podemos guardar muitas coisas dentro, e objeto é tudo aquilo
+// que temos no mundo real, por exemplo uma pessoa é considerada um objeto e passando para a programação
+// um objeto tem suas características que o identifique. E podemos usá-los sempre que necessário em uma
+// uma aplicação.
+
+// 2.
+
+/*
+function criaRetamgulo(lado1, lado2) {
+
+  let largura = lado1
+  let altura = lado2 
+  let perimetro = 2 * (lado1 + lado2)
+  let area = lado1 * lado2
+
+  console.log("Largura: " + largura)
+  console.log("Altura: " + altura)
+  console.log("Perímetro: " + perimetro)
+  console.log("Área: " + area)
+ 
+}
+
+criaRetamgulo(8,7)
+*/
+
+// 3.
+
+/*
+let filme = {
+  titulo: "Para Sempre Cinderela",
+  ano: 1997,
+  diretor: "Andy Tennant",
+  atrizes: ["Drew Barrymore", "Melanie Lynskey"],
+};
+console.log(
+  "Venha assistir ao filme " +
+    filme.titulo +
+    " de " +
+    filme.ano +
+    " dirigido por " +
+    filme.diretor +
+    " e estrelado por " +
+    filme.atrizes[0] +
+    " e " +
+    filme.atrizes[1] +
+    "."
+);
+
+*/
+
+// 4.
+
+/*
+function anonimizarPessoa() {
+  let pessoa = {
+    nome: "Vanessa",
+    idade: 31,
+    email: "vanessa182vans@gmail.com",
+    endereco: "Rio Grande do Sul",
+  };
+
+  let novoUsuario = {
+    ...pessoa,
+    nome: "ANÔNIMO",
+  };
+  console.log(novoUsuario);
+}
+
+anonimizarPessoa();
 */
