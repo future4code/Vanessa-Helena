@@ -230,3 +230,84 @@ function anonimizarPessoa() {
 
 anonimizarPessoa();
 */
+
+//------------------------------------------------------------------------------------------------------
+
+// Exercícios de funções de array
+
+// 1.
+
+// a.
+
+/*
+const pessoas = [
+  { nome: "Pedro", idade: 20 },
+  { nome: "João", idade: 10 },
+  { nome: "Paula", idade: 12 },
+  { nome: "Artur", idade: 89 }
+];
+
+
+const soAdultos = pessoas.filter((item) => {
+  return item.idade >= 20
+  
+})
+  
+console.log(soAdultos)
+
+// b. 
+
+const soCriancas = pessoas.filter((item) => {
+  return item.idade <= 12 
+})
+
+console.log(soCriancas)
+*/
+
+// 2.
+
+// a.
+
+/*
+const array = [1, 2, 3, 4, 5, 6]
+
+const multiplicandoNumeros = array.map(num => num * 2)
+console.log(multiplicandoNumeros)
+*/
+
+// b.
+
+/*
+const array = [1, 2, 3, 4, 5, 6];
+
+const multiplicandoNumeros = array.map((num) => num * 3);
+const numerosString = multiplicandoNumeros.toString();
+console.log (typeof(numerosString));
+*/
+
+// c. Travei
+
+// 3.
+
+// a.
+
+/*
+function regrasDoParque() {
+  const pessoas = [
+    { nome: "Paula", idade: 12, altura: 1.8 },
+    { nome: "João", idade: 20, altura: 1.3 },
+    { nome: "Pedro", idade: 15, altura: 1.9 },
+    { nome: "Luciano", idade: 22, altura: 1.8 },
+    { nome: "Artur", idade: 10, altura: 1.2 },
+    { nome: "Soter", idade: 70, altura: 1.9 },
+  ];
+
+  const permissaoDeEntrar = pessoas.filter((item) => {
+    return item.idade > 1.5 //&& item.idade > 14 && item.idade < 60
+  })
+  console.log(permissaoDeEntrar)
+}
+*/
+
+// OBS: Travei nesse exercícios de funções e array, ainda tenho muita dúvida e não quis só copiar código e
+//jogar aqui sem entender, fiz até onde eu consegui. 
