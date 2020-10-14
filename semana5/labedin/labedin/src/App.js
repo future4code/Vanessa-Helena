@@ -2,9 +2,12 @@ import React from 'react';
 import './App.css';
 import CardGrande from './components/CardGrande/CardGrande';
 import ImagemButton from './components/ImagemButton/ImagemButton';
+import CardPequeno from './components/CardPequeno/CardPequeno';
 import fofinha from './imagens/fofinha.jpg'
 import venda from './imagens/venda.png'
-import cafe from './imagens/cafe.png'
+import cafe from './imagens/cafe.jpg'
+import email from './imagens/email.png'
+import endereco from './imagens/endereco.png'
 
 function App() {
   return (
@@ -25,27 +28,34 @@ function App() {
       </div>
 
       <div className="page-section-container">
+        <CardPequeno 
+          imagem={email}
+          nome="Email:" email="vanessa@bol.com.br"
+          
+          
+        />
+        <CardPequeno 
+          imagem={endereco}
+          nome="Endereço:" endereco="Rua das Palmeiras 250" 
+
+        
+        />
+        <div className="page-section-container">
         <h2>Experiências profissionais</h2>
         <CardGrande 
           imagem={venda}
           nome="Consultora de vendas" 
           descricao="Trabalhei minha vida toda na área de vendas!" 
         />
-        
+
         <CardGrande 
           imagem={cafe} 
           nome="Amo beber café" 
-          descricao="Quem não gosta de um cafézinho não é." 
+          descricao="Quem aí não gosta de um cafezinho?" 
         />
       </div>
-
-      <div className="page-section-container">
-        <CardPequeno 
-          imagem={venda}
-          email="vanessa@bol.com.br" 
-          endereco="Rua das Palmeiras 250" 
-        /> 
-
+      
+      
       <div className="page-section-container">
         <h2>Minhas redes sociais</h2>
         <ImagemButton 
@@ -56,9 +66,9 @@ function App() {
         <ImagemButton 
           imagem="https://logodownload.org/wp-content/uploads/2014/09/twitter-logo-1-1.png" 
           texto="Twitter" 
-        />        
+        />      
+        </div>  
       </div>
-    </div>
     </div>
   );
 }
