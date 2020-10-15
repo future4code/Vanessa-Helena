@@ -40,6 +40,8 @@ class Post extends React.Component {
     });
   };
 
+  
+    
   render() {
     let iconeCurtida;
 
@@ -85,6 +87,7 @@ class Post extends React.Component {
             icone={iconeComentario}
             onClickIcone={this.onClickComentario}
             valorContador={this.state.numeroComentarios}
+            
           />
         </div>
         {componenteComentario}
