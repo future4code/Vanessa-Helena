@@ -7,29 +7,63 @@ import lauren from './imagens/lauren.jpg'
 import melissa from './imagens/melissa.jpg'
 
 class App extends React.Component {
+  state = {
+    pessoas: [
+      {
+      nomeUsuario1: "Paulinha",
+      fotoUsuario: "https://picsum.photos/50/50",
+      fotoPost: "https://picsum.photos/200/150"
+      },
+      {
+        nomeUsuario2: lauren,
+        fotoUsuario: lauren,
+        fotoPost: globodeneve
+      },
+      {
+        nomeUsuario3: melissa,
+       fotoUsuario: melissa,
+       fotoPost: balao
+      }
+    ],
+    valorInputUser: "",
+    valorInputFotoUser: "",
+    valorInputFotoPost: ""
+  };
   render() {
+    const listaDeComponentes = this.state.pessoas.map((pessoa)=>{
+      return (
+        <Post
+        nomeUsuario={pessoa.nomeUsuario}
+        fotoUsuario={pessoa.fotoUsuario}
+        fotoPost={pessoa.fotoPost}
+     />
+      );
+    });
     return (
-      <div className={"app-container"}>
-        <Post
-          nomeUsuario1={"paulinha"}
-          fotoUsuario={"https://picsum.photos/50/50"}
-          fotoPost={"https://picsum.photos/200/150"}
-        />
-
-        <Post
-          nomeUsuario2={"lauren"}
-          fotoUsuario={lauren}
-          fotoPost={globodeneve}
-        />
-
-        <Post
-          nomeUsuario3={"melissa"}
-          fotoUsuario={melissa}
-          fotoPost={balao}
-        />
+      <div>
+        {listaDeComponentes}
       </div>
     );
   }
 }
+export default App; 
 
-export default App;
+
+
+
+
+
+
+
+
+
+       
+        
+
+        
+       
+   
+       
+       
+
+  
