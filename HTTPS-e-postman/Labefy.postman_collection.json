@@ -6,7 +6,7 @@
 	},
 	"item": [
 		{
-			"name": "Create Play",
+			"name": "create Playlist",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -18,7 +18,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"name\": \"Melhores do Pop\"\n}",
+					"raw": "{\n    \"name\": \"Só as melhores variadas\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -42,12 +42,20 @@
 			"response": []
 		},
 		{
-			"name": "Get All Play",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
+			"name": "Get All Playlists",
 			"request": {
 				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Track To Playlist",
+			"request": {
+				"method": "POST",
 				"header": [
 					{
 						"key": "Authorization",
@@ -57,7 +65,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "\n\"quantity\": \"\",\n\"list\": \"\",\n\"id\": \"\",\n\"name\": \"\"\n\n",
+					"raw": "{\n\"name\": \"XXX\", \n\"artist\": \"XXX\",\n\"url\": \"https://www.youtube.com/watch?v=_pLO4jFDeIc&t=9s\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -65,7 +73,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists\n",
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/543b677b-75f1-4c74-ac9d-d2e8a56ebff0/tracks",
 					"protocol": "https",
 					"host": [
 						"us-central1-labenu-apis",
@@ -74,8 +82,72 @@
 					],
 					"path": [
 						"labefy",
-						"playlists\n"
+						"playlists",
+						"543b677b-75f1-4c74-ac9d-d2e8a56ebff0",
+						"tracks"
 					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Play List Tracks",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "vanessa-helena-dumont",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/543b677b-75f1-4c74-ac9d-d2e8a56ebff0/tracks",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						"543b677b-75f1-4c74-ac9d-d2e8a56ebff0",
+						"tracks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Playlist",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Track From Playlist",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Playlist",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
 				}
 			},
 			"response": []
