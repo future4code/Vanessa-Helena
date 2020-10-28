@@ -1,17 +1,23 @@
 import React from "react";
 import axios from "axios";
+// import styled from "styled-components";
 
-export class TelaCadastro extends React.Component {
+// const Divisao = styled.span`
+//   text-align: center;
+//   margin-left: 10px;
+// `;
+
+
+class TelaCadastro extends React.Component {
   state = {
-    pegarCadastro: "",
     pegarCadastroName: "",
-    pegarCadastroEmail: ""
+    pegarCadastroEmail: "",
   };
 
   pegarCadastro = () => {
     const body = {
-      name: this.state.pegarCadastro.name,
-      email: this.state.pegarCadastro.email
+      name: this.state.pegarCadastroName,
+      email: this.state.pegarCadastroEmail,
     };
 
     axios
@@ -24,8 +30,9 @@ export class TelaCadastro extends React.Component {
           },
         }
       )
-      .then((resposta) => {
-        console.log(resposta.data);
+      .then(() => {
+        alert("Usuário criado com sucesso!");
+        this.setState({ pegarCadastroName: "", pegarCadastroEmail: "" });
       })
       .catch((error) => {
         console.log(error.message);
@@ -33,27 +40,26 @@ export class TelaCadastro extends React.Component {
   };
 
   onChangepegarCadastroName = (event) => {
-    this.setState({ pegarCadastro: event.target.value });
+    this.setState({ pegarCadastroName: event.target.value });
   };
 
   onChangepegarCadastroEmail = (event) => {
-    this.setState({ pegarCadastro: event.target.value });
+    this.setState({ pegarCadastroEmail: event.target.value });
   };
 
   render() {
     return (
       <div>
-        {" "}
         <label>Nome:</label>
         <input
           type="text"
-          value={this.state.pegarCadastro}
+          value={this.state.pegarCadastroName}
           onChange={this.onChangepegarCadastroName}
         />
         <label>Email: </label>
         <input
           type="text"
-          value={this.state.pegarCadastro}
+          value={this.state.pegarCadastroEmail}
           onChange={this.onChangepegarCadastroEmail}
         />
         <button onClick={this.pegarCadastro}>Salvar</button>
@@ -61,3 +67,5 @@ export class TelaCadastro extends React.Component {
     );
   }
 }
+
+export default TelaCadastro;
