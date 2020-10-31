@@ -5,6 +5,7 @@ export default class CriandoPlaylist extends React.Component {
   state = {
     inputPlaylist: "",
   };
+
   criarPlayList = () => {
     const body = {
       name: this.state.inputPlaylist,
@@ -30,6 +31,7 @@ export default class CriandoPlaylist extends React.Component {
   onChangeInputPlaylist = (event) => {
     this.setState({ inputPlaylist: event.target.value });
   };
+
   render() {
     return (
       <div>
@@ -37,11 +39,10 @@ export default class CriandoPlaylist extends React.Component {
         <input
           value={this.state.inputPlaylist}
           onChange={this.onChangeInputPlaylist}
-          placeholder="Digite nome da playlist"
+          placeholder="Digite o nome da playlist"
         />
         <button onClick={this.criarPlayList}>Salvar</button>
-        <p>Clique no botão para ver suas músicas criada.</p>
-        <button>Próxima Página</button>
+        <p>Clique no botão para ver as playlists criadas.</p>
       </div>
     );
   }
