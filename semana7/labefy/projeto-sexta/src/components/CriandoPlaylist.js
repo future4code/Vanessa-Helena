@@ -1,5 +1,11 @@
 import axios from "axios";
 import React from "react";
+import styled from "styled-components";
+
+const Div = styled.div`
+  text-align: center;
+  color: black;
+`;
 
 export default class CriandoPlaylist extends React.Component {
   state = {
@@ -34,7 +40,7 @@ export default class CriandoPlaylist extends React.Component {
 
   render() {
     return (
-      <div>
+      <Div>
         <h1>Criando playlist</h1>
         <input
           value={this.state.inputPlaylist}
@@ -43,7 +49,7 @@ export default class CriandoPlaylist extends React.Component {
         />
         <button onClick={this.criarPlayList}>Salvar</button>
         <p>Clique no botão para ver as playlists criadas.</p>
-      </div>
+      </Div>
     );
   }
 }
