@@ -1,0 +1,94 @@
+
+* {
+
+margin: 0;
+
+}
+
+
+
+
+body {
+
+	font-family: sans-serif;
+}
+
+
+nav {
+
+
+	position: auto;
+	text-align: center;
+	word-spacing: 5px;
+	
+}
+
+a:link, a:visited {
+	text-decoration: none;
+	color:#535353;
+
+
+}
+ 
+
+.busca {
+
+background-color: brown;
+margin-top: 10px;
+padding:10px;
+text-align: center;
+
+
+}
+
+
+
+.container {
+
+display:flex;
+flex-wrap: wrap;
+margin-top: 40px;
+padding:50px;
+justify-content: center;
+align-items: center;
+margin-right:20px;
+margin: 0 auto;
+
+}
+
+
+.item {
+	
+	
+	justify-items: center;
+	font-size: 1.5em;
+}
+
+
+footer {
+
+position:fixed;
+text-align: center;
+bottom:0;
+width:100%;
+}
+
+
+@media screen end (min-width: 768px) {
+
+
+nav {
+
+flex-direction:row;
+justify-content: space-around;
+
+}
+
+
+nav a {
+
+flex-direction:row;
+width: 70%;
+
+}
+
