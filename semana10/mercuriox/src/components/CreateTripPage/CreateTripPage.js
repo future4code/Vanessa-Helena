@@ -1,7 +1,7 @@
 import React from "react";
 
 
-export default function CriarViagens() {
+export default function CreateTripPage() {
   return (
     <div>
     <p>Criar viagem</p>

@@ -1,22 +1,18 @@
 import React from "react";
 import "./App.css";
-import Inscrever from './components/Inscrever';
-import LoginAdministrador from './components/LoginAdministrador';
-import PaginaDeDetalhes from './components/PaginaDeDetalhes';
-import PaginaInicial from './components/PaginaInicial';
-import TodasRotas from './components/TodasRotas';
-import ViagensDisponiveis from './components/ViagensDisponiveis';
-import CriarViagens from './components/CriarViagens'
+import styled from "styled-components";
+import Router from "./components/Router/Router";
+
+const Container = styled.div`
+  padding: 60px 0;
+  display: flex;
+  justify-content: center;
+`;
+
 export default function App() {
   return (
-    <div className="App">
-    <CriarViagens />
-    <Inscrever />
-    <LoginAdministrador />
-    <PaginaDeDetalhes />
-    <PaginaInicial />
-    <TodasRotas />
-    <ViagensDisponiveis />
+    <div>
+      <Router />
     </div>
   );
 }
