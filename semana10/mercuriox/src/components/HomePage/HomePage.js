@@ -1,33 +1,46 @@
 import React from "react";
-import styled from "styled-components";
 import { useHistory } from "react-router-dom";
-
-const Navegacao = styled.div`
-  width: 100vw;
-  height: 60px;
-  background-color: #dcdcdc;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-`;
+import { Navegacao } from "./styled";
+import { MeuBotao } from "./styled";
+import { Divisao } from "./styled";
+import logo from "../../assets/logo.png";
 
 export default function HomePage() {
   const history = useHistory();
 
-  const irParaPaginaInscrever = () => {
-    history.push("/ApplicationFormPage");
+  const IrParaPaginaInicial = () => {
+    history.push("/");
   };
+
+  const irParaPaginaInscrever = () => {
+    history.push("/application-form");
+  };
+
+  const irParaPaginaTodasViagens = () => {
+    history.push("/trips/list");
+  };
+
+  // const irParaPaginaVerDetalhe = () => {
+  //   history.push("/TripDetailsPage");
+  // };
+
+  const irParaPaginaLogin = () => {
+    history.push("/login");
+  };
+
   return (
-    <Navegacao>
-      <button>Login Parte Administrativa</button>
-      <button onClick={irParaPaginaInscrever}>
-        Formulário para se inscrever
-      </button>
-    </Navegacao>
+    <Divisao>
+      <Navegacao>
+        <MeuBotao onClick={IrParaPaginaInicial}>Página Inicial</MeuBotao>
+        <MeuBotao onClick={irParaPaginaInscrever}>Inscreva-se</MeuBotao>
+        {/* <MeuBotao onClick={irParaPaginaVerDetalhe}>Detalhe Viagem</MeuBotao> */}
+        <MeuBotao onClick={irParaPaginaTodasViagens}>
+          Viagens Disponíveis
+        </MeuBotao>
+        <MeuBotao onClick={irParaPaginaLogin}>Login</MeuBotao>
+      </Navegacao>
+      <img src={logo} />
+    </Divisao>
   );
 }
-
 
