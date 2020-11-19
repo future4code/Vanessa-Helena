@@ -12,12 +12,8 @@ export default function HomePage() {
     history.push("/");
   };
 
-  const irParaPaginaInscrever = () => {
-    history.push("/application-form");
-  };
-
   const irParaPaginaTodasViagens = () => {
-    history.push("/trips/list");
+    history.push("/trips-list");
   };
 
   // const irParaPaginaVerDetalhe = () => {
@@ -32,7 +28,6 @@ export default function HomePage() {
     <Divisao>
       <Navegacao>
         <MeuBotao onClick={IrParaPaginaInicial}>Página Inicial</MeuBotao>
-        <MeuBotao onClick={irParaPaginaInscrever}>Inscreva-se</MeuBotao>
         {/* <MeuBotao onClick={irParaPaginaVerDetalhe}>Detalhe Viagem</MeuBotao> */}
         <MeuBotao onClick={irParaPaginaTodasViagens}>
           Viagens Disponíveis

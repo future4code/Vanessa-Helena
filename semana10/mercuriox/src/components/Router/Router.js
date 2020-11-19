@@ -4,6 +4,7 @@ import ApplicationFormPage from "../ApplicationFormPage/ApplicationFormPage";
 import HomePage from "../HomePage/HomePage";
 import ListTripsPage from "../ListTripsPage/ListTripsPage";
 import LoginPage from "../LoginPage/LoginPage";
+import PrivatePage from "../PrivatePage/PrivatePage";
 import TripDetailsPage from "../TripDetailsPage/TripDetailsPage";
 
 export default function Router() {
@@ -21,6 +22,9 @@ export default function Router() {
         </Route>
         <Route exact path="/trips-create">
           <TripDetailsPage />
+        </Route>
+        <Route exact path="/private-page">
+          <PrivatePage />
         </Route>
         <Route exact path="/login">
           <LoginPage />

@@ -13,7 +13,7 @@ export default function LoginPage() {
     const token = localStorage.getItem("token");
 
     if (token) {
-      history.push("/TripDetailsPage");
+      history.push("/private-page");
     }
   }, [history]);
 
@@ -28,7 +28,7 @@ export default function LoginPage() {
   const login = () => {
     const body = {
       email: email,
-      senha: senha,
+      password: senha,
     };
 
     axios
@@ -38,7 +38,8 @@ export default function LoginPage() {
       )
       .then((res) => {
         localStorage.setItem("token", res.data.token);
-        history.push("/TripDetailsPage");
+        history.push("/private-page");
+        console.log("Resposta", res);
       })
       .catch((err) => {
         console.log(err);
@@ -50,7 +51,7 @@ export default function LoginPage() {
       <p>Login</p>
       Email: <input value={email} onChange={pegaEmail}></input>
       Senha: <input value={senha} onChange={pegaSenha}></input>
-      <MeuBotao>Fazer login</MeuBotao>
+      <MeuBotao onClick={login}>Fazer login</MeuBotao>
     </Divisao>
   );
 }
