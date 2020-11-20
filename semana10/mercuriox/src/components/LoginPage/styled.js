@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const Divisao = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  gap: 10px;
+  justify-items: center;
 `;
 
 export const MeuBotao = styled.button`

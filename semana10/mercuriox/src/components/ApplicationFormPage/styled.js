@@ -5,6 +5,6 @@ export const Divisao = styled.div`
   flex-direction: column;
   align-items: center;
   width: 200px;
-  height: 500px;
   margin-left: 40%;
+
 `;

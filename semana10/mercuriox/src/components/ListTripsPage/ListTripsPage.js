@@ -35,7 +35,7 @@ export default function ListTripsPage() {
       <p key={trip.id}> {item.name} - {item.date} - {item.planet} - {item.durationInDays} dias 
      {item.description}
      
-     <button onClick={IrParaPaginaForm }>Candidatar</button>
+     <button onClick={IrParaPaginaForm}>Candidatar</button>
      </p>
      
      
