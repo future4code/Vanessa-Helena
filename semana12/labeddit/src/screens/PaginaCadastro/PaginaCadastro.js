@@ -1,5 +1,5 @@
 import React from "react";
-import { Divisao } from "./estilo";
+import { Divisao, Input, MeuBotao } from "./estilo";
 import { useHistory } from "react-router-dom";
 import { useForm } from "../../hooks/useForm";
 import { cadastro } from "../../services/user";
@@ -17,35 +17,36 @@ export default function PaginaCadastro() {
     event.preventDefault();
     cadastro(form, history);
   };
-  console.log(form);
   return (
     <Divisao>
-      <div> Cadastro :)</div>
+      <p> Cadastro :)</p>
       <form onSubmit={formDeEnvio}>
-        <label>Nome:</label>
-        <input
+        <Input
+          placeholder="Nome"
           name="username"
           required
           value={form.username}
           onChange={mudancaInput}
         />
-        <label>Email:</label>
-        <input
+
+        <Input
+          placeholder="Email"
           type="email"
           name="email"
           required
           value={form.email}
           onChange={mudancaInput}
         />
-        <label>Senha:</label>
-        <input
+
+        <Input
+          placeholder="Senha"
           type="password"
           name="password"
           required
           value={form.password}
           onChange={mudancaInput}
         />
-        <button>Cadastrar</button>
+        <MeuBotao>Cadastrar</MeuBotao>
       </form>
     </Divisao>
   );

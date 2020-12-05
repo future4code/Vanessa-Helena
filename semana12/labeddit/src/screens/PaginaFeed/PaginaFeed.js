@@ -4,7 +4,7 @@ import { BASE_URL } from "../../constants/apiConstants";
 import { DadosSolicitacao } from "../../hooks/DadosSolicitacao";
 import { useHistory } from "react-router-dom";
 import CardPosts from "../../components/CardPosts/CardPosts";
-import { CardPost, MeuBotao } from "./estilo";
+import { CardPost, MeuBotao, Input, TextArea } from "./estilo";
 import { criandoPosts } from "../../services/user";
 import { useForm } from "../../hooks/useForm";
 
@@ -30,10 +30,10 @@ export default function PaginaFeed() {
       <CardPost>
         <form onSubmit={formDeEnvio}>
           <p>Digite um título para o seu post.</p>
-          <input name="title" value={form.title} onChange={mudancaInput} />
+          <Input name="title" value={form.title} onChange={mudancaInput} />
 
           <p>Escreva seu post.</p>
-          <textarea
+          <TextArea
             type="text"
             name="text"
             value={form.text}

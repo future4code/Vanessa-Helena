@@ -1,5 +1,5 @@
 import React from "react";
-import { Cards, CardComentarios, CardVotos } from "../estilo";
+import { Cards, CardComentarios, CardVotos, MeuBotao } from "../estilo";
 import like from "../../assets/like.png";
 import deslike from "../../assets/deslike.png";
 import { irParaPosts } from "../../router/Coordinator";
@@ -9,13 +9,14 @@ export default function CardPosts(props) {
   const history = useHistory();
   return (
     <Cards>
+      <MeuBotao onClick={() => irParaPosts(history, props.id)}>
+        Para mais detalhes clique !!
+      </MeuBotao>
       <p>{props.username}</p>
       {props.text}
       <CardComentarios>
-        {props.commentsCount}
-        <button onClick={() => irParaPosts(history,props.id)}>&nbsp;comentários</button>
+        {props.commentsCount}&nbsp;&nbsp;comentários
       </CardComentarios>
-
       <CardVotos>
         <img src={like} alt="icone like" />
         &nbsp;&nbsp;{props.votesCount}&nbsp;&nbsp;

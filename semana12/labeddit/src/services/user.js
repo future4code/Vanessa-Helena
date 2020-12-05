@@ -44,16 +44,14 @@ export const criandoPosts = (body, history) => {
     });
 };
 
-export const detalhesPosts = (history) => {
+export const detalhesPosts = (id) => {
   axios
-    .get(`${BASE_URL}/posts/${params.id}`, {
+    .get(`${BASE_URL}/posts/${id}`, {
       headers: {
         Authorization: localStorage.getItem("token"),
       },
     })
-    .then((res) => {
-      console.log("Res",res.data.post)
-    })
+    .then(() => {})
     .catch((erro) => {
       console.log(erro.mensagem);
     });

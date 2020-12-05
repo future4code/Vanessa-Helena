@@ -1,5 +1,5 @@
 import React from "react";
-import { Divisao } from "./estilo";
+import { Divisao, Input, MeuBotao } from "./estilo";
 import { useHistory } from "react-router-dom";
 import { irParaCadastro } from "../../router/Coordinator";
 import { useForm } from "../../hooks/useForm";
@@ -20,29 +20,30 @@ export default function PaginaLogin() {
   };
   return (
     <Divisao>
-      <div> Login :)</div>
+      <p>Login :)</p>
       <form onSubmit={formDeEnvio}>
-        <label>Email:</label>
-        <input
+        <Input
+          placeholder="Email"
           type="email"
           name="email"
           required
           value={form.email}
           onChange={mudancaInput}
         />
-        <label>Senha:</label>
-        <input
+
+        <Input
+          placeholder="Senha"
           type="password"
           name="password"
           value={form.password}
           required
           onChange={mudancaInput}
         />
-        <button>Entrar</button>
+        <MeuBotao>Entrar</MeuBotao>
       </form>
-      <button onClick={() => irParaCadastro(history)}>
+      <MeuBotao onClick={() => irParaCadastro(history)}>
         Não tem login? Clique Aqui
-      </button>
+      </MeuBotao>
     </Divisao>
   );
 }

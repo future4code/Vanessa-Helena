@@ -26,3 +26,8 @@ export const CardComentarios = styled.p`
   position: relative;
 `;
 
+export const MeuBotao = styled.button`
+  margin-bottom: 0.5em;
+  color: #ff3877;
+  display: block;
+`;

@@ -1,21 +1,28 @@
 import styled from "styled-components";
 
 export const Divisao = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin: 60px auto;
-  width: 10vw;
-  height: 30vh;
-  margin-left: 520px;
-  line-height: 1.5;
+  color: #ff3877;
+  display: block;
+  width: 300px;
+  margin: 50px auto;
 `;
 
 export const MeuBotao = styled.button`
-  display: flex;
-  background: #ffe3dc;
-  border: 2px solid #ff3877;
-  font-size: 1rem;
-  margin-left: 35rem;
-  padding: 1rem 1rem;
+  margin-bottom: 0.5em;
+  margin: 10px;
+  color: #ff3877;
+  display: block;
+`;
+
+export const Input = styled.input`
+  padding: 0.5em;
+  color: #ff3877;
+  background: papayawhip;
+  border: none;
+  border-radius: 3px;
+  width: 100%;
+  margin-bottom: 0.5em;
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  outline: 0;
 `;
