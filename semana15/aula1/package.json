@@ -1,0 +1,22 @@
+{
+  "name": "aula1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "clear && echo \"Iniciando aplicação...\" && node ./index.js",
+    "test": "echo \"Error: no test specified\" ",
+    "exercicio01": "node exercicio01.js",
+    "exercicio02": "node exercicios02.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/future4code/Vanessa-Helena.git"
+  },
+  "author": "vanessa-helena",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/future4code/Vanessa-Helena/issues"
+  },
+  "homepage": "https://github.com/future4code/Vanessa-Helena#readme"
+}
