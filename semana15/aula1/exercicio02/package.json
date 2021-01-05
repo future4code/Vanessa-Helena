@@ -1,0 +1,20 @@
+{
+  "name": "exercicio02",
+  "version": "1.0.0",
+  "description": "\"\"",
+  "main": "exercicio02.js",
+  "scripts": {
+    "start": "clear && echo \"Exercício2...\" && node ./exercicio02.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/future4code/Vanessa-Helena.git"
+  },
+  "author": "vanessa-helena",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/future4code/Vanessa-Helena/issues"
+  },
+  "homepage": "https://github.com/future4code/Vanessa-Helena#readme"
+}
