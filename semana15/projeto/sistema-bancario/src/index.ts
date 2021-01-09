@@ -1,86 +1,60 @@
-import express, { Express, Request, Response } from 'express';
-import cors from 'cors'
-
+import express, { Express, Request, Response } from "express";
+import cors from "cors";
+import { conta } from "./contas";
 const app: Express = express();
 
 app.use(express.json());
 app.use(cors());
 
-//para adicionar usuário
-export type user = {
-    
-    id: number,
-    nome: string,
-    cpf: number,
-    dataNascimento: number
-    saldo: number,
-    //extratoBancario?: transacoes[]
-}
-//pra adicionar informações do extrato
-//export type transacoes = {
-    //valor: number,
-    //data: number,
-    //descricao?: string 
-//}
-//array contas
-export let accounts: user[] = [
-    {
-    id: 1,
-      nome: "Dory",
-      cpf: 12345678911,
-      dataNascimento: 655527600000,
-      saldo: 1000,
-      //extratoBancario: [
-          //{
-           // valor: 200,
-           // data: 1610124445801
-         // }
-      //]
-    },
-    {
-        id: 2,
-        nome: "Alice",
-        cpf: 12345678958,
-        dataNascimento: 536983200000,
-        saldo: 4000,
-        //extratoBancario: [
-            //{
-             // valor: 800,
-             // data: 1610124445801
-           // }
-        //]
-      }
-]
+app.post("/usuarios/criar", (req: Request, res: Response) => {
+  try {
+    const { nome, cpf, dataNascimentoAsString } = req.body; // dia/mes/ano
+    // A data por padrão vem no formato americano, então precisamos passar
+    // passar para a forma que somos acostumados usando o split.
+    const [dia, mes, ano] = dataNascimentoAsString.split("/");
+    const dataNascimento: Date = new Date(`${dia}-${mes}-${ano}`);
+    // validar as entradas da req
+    const idade: number = Date.now() - dataNascimento.getTime() // Vem em milisegundos daí tem que ir convertendo
+    const idadeEmAnos: number = idade / 1000 / 60 / 60 / 24 / 365
 
-app.post("/users", (req: Request, res: Response)=> {
-
-    let errorCode: number = 400;
-
-    try {
-
-        const reqBody: user = {
-            id: Date.now(),
-            nome: req.body.nome,
-            cpf: req.body.cpf,
-            dataNascimento: req.body.dataNascimento,
-            saldo: req.body.saldo,
-            //extratoBancario: req.body.extratoBancario
-            
-        }
-
-        if(!reqBody.nome || !reqBody.cpf || !reqBody.dataNascimento || !reqBody.saldo){
-            errorCode = 422;
-            throw new Error("Algum campo está inválido. Preencha corretamente.");
-        }
-
-        accounts.push(reqBody);
-    
-        res.status(200).send({message: "Usuário inserido com sucesso!"});
-        
-    } catch (error) {
-        res.status(errorCode).send({message: error.message});
+    if (idadeEmAnos < 18) {
+        res.statusCode = 406
+        throw new Error("Idade deve ser maior que 18 anos")
     }
+    // consultar ou alteração a base de dados
+    
+    
+    conta.push({
+      nome,
+      cpf,
+      dataNascimento,
+      saldo: 0,
+      extratoBancario: [],
+    });
+    // validar os resultados da consulta
+    if (cpf != conta) {
+      res.statusCode = 406
+      throw new Error("Não pode existir dois clientes com o mesmo cpf!!")
+    }
+    // enviar a resposta
+    res.status(201).send("Conta criada com sucesso!!");
+  } catch (error) {
+    console.log(error);
+    res.status(400).send(error.message);
+  }
+});
 
+app.get("/usuarios/pegar", (req: Request, res: Response) => {
+  let errorCode: number = 400;
+  try {
+      if(!conta.length){
+          res.statusCode = 404
+          throw new Error("Nenhuma conta encontrada")
+      }
+    res.status(200).send(conta);
+  } catch (error) {
+    res.status(400).send(error.message);
+  }
 });
 
 // ---------------------------------------------------- código servidor
@@ -88,10 +62,10 @@ app.post("/users", (req: Request, res: Response)=> {
 import { AddressInfo } from "net";
 
 const server = app.listen(process.env.PORT || 3003, () => {
-    if (server) {
-       const address = server.address() as AddressInfo;
-       console.log(`Server is running in http://localhost: ${address.port}`);
-    } else {
-       console.error(`Failure upon starting server.`);
-    }
+  if (server) {
+    const address = server.address() as AddressInfo;
+    console.log(`Server is running in http://localhost: ${address.port}`);
+  } else {
+    console.error(`Failure upon starting server.`);
+  }
 });
