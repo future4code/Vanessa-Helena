@@ -4,6 +4,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import { AddressInfo } from "net";
 import { create } from "domain";
+import { PassThrough } from "stream";
 
 dotenv.config();
 
@@ -23,6 +24,8 @@ app.use(express.json());
 app.use(cors());
 
 // endpoints aqui
+
+// Exercício 1
 
 async function createUser(
   id: number,
@@ -67,6 +70,32 @@ app.post("/users", (req: Request, res: Response) => {
     res.status(200).send({ message: "Usuário inserido com sucesso!" });
   } catch (error) {
     res.status(errorCode).send({ message: error.message });
+  }
+});
+
+// Exercício 2
+
+const catchUsersByid = async (id: string): Promise<any> => {
+  const result = await connection.raw(
+    `SELECT * FROM TodoListUser WHERE id = ${id};`
+  );
+  return result[0][0];
+};
+
+app.get("/users/id", async (req: Request, res: Response) => {
+  try {
+    const id: string = req.query.id as "id";
+    const catchId = await catchUsersByid(id);
+    if (!catchId === null) {
+      res.status(200).send(catchId);
+      console.log(id);
+    } else {PassThrough;
+      ("Usuário não encontrado.");
+    }
+  } catch (error) {
+    res.status(400).send({
+      message: error.message,
+    });
   }
 });
 
