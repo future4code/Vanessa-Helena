@@ -8,9 +8,9 @@ export const getAllUsers = async (
   res: Response
 ): Promise<void> => {
   try {
-    const name: string = req.query.name as "name"
+    const name = req.query.name as string
     const myUser = await getAllUsersByName(name)
-    res.status(200).send({ user: myUser })
+    res.status(200).send(myUser)
     } catch (error) {
        console.log(error)
        res.send(error.message)
