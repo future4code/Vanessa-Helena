@@ -1,0 +1,19 @@
+PUT http://localhost:3003/user/
+Content-Type: application/json
+
+{
+    "name":"Vanessa",
+    "nickname":"Nessa",
+    "email":"vanessa182vans@gmail.com",
+    "password":"senha1234"
+
+}
+
+POST http://localhost:3003/user/login
+Content-Type: application/json
+
+{
+    "email":"vanessa182vans@gmail.com",
+    "password": "senha1234"
+}
+
