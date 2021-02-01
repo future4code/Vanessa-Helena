@@ -1,4 +1,5 @@
-import insertUser, { getUserByEmail } from "../data/userDatabase";
+import { insertUser } from "../data/userDatabase";
+import { getUserByEmail } from "../data/userDatabase";
 import { generateToken } from "../business/services/authenticator";
 import { compare, hash } from "../business/services/hashManager";
 import { generateId } from "../business/services/idGenerator";
@@ -13,7 +14,6 @@ export const businessSignup = async (
   if (!email || email.indexOf("@") === -1) {
     throw new Error("Email inválido!!");
   }
-
   if (!role) {
     throw new Error("Usuário inválido!!");
   }
@@ -64,3 +64,4 @@ export const businessLogin = async (email: string, password: string) => {
   });
   return token;
 };
+

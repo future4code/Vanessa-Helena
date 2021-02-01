@@ -8,7 +8,7 @@ export type AuthenticationData = {
 
 export function generateToken(payload: AuthenticationData): string {
   return jwt.sign(payload, process.env.JWT_KEY as string, {
-    expiresIn: "30min",
+    expiresIn: "24h",
   });
 }
 
