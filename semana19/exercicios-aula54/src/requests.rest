@@ -1,0 +1,3 @@
+GET http://localhost:3003/users/all
+Content-Type: application/json
+Authorization: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJhY2U1MDBmLWMyMDAtNGJkYy1iYjhkLTcyMjhmZmE5MmIxYiIsInJvbGUiOiJOT1JNQUwiLCJpYXQiOjE2MTIyMjI3ODUsImV4cCI6MTYxMjMwOTE4NX0.tUNdzqaTnSz00xnjgT3ND80pRMY4oc6qOyxEnmGY9RU"
