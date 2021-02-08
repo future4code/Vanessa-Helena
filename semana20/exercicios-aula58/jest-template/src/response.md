@@ -19,4 +19,8 @@ c) No código em exercicio2.test
 
 ### Exercício 3 
 
+a) Já li
 
+b) Está no index
+
+c) Tudo

@@ -1,12 +1,12 @@
 import { User } from "./entities/user";
 import {
-  UserTwo,
+  ClientUser,
   Casino,
   LOCATION,
   Result,
   UserTwoUnallowed,
   NACIONALITY,
-} from "./entities/userTwo";
+} from "./entities/clientUser";
 
 export function performPurchase(user: User, value: number): User | undefined {
   if (user.balance >= value) {
@@ -18,8 +18,8 @@ export function performPurchase(user: User, value: number): User | undefined {
   return undefined;
 }
 
-export function verifyAge(casino: Casino, users: UserTwo[]): Result {
-  const allowed: UserTwo[] = [];
+export function verifyAge(casino: Casino, users: ClientUser[]): Result {
+  const allowed: ClientUser[] = [];
   const unallowed: UserTwoUnallowed[] = [];
 
   for (const UserTwo of users) {
