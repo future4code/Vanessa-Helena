@@ -20,8 +20,22 @@ f) No código
 
 ### Exercício 3 
 
-a) 
+a) No código
 
-b) 
+b) No código 
 
-c) 
+c) A função performAttack depende da função validateCharacter. Com a inversão de dependências não há mais a dependência, cada coisa fica no seu devido lugar.
+
+### Exercício 4 
+
+a) A função validateCharacter porque são os dados dessa função que outras funções iram precisar.
+
+b) No código
+
+c) No código
+
+### Exercício 5 
+
+a) No código
+
+b) No código

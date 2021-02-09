@@ -1,7 +1,9 @@
 import { CharacterInput } from "./entities/character";
 
-export const validateCharacter = (input: CharacterInput): boolean => {
-  if (
+export const validateCharacter = (
+    input: CharacterInput): boolean => {
+  
+    if (
     !input.name ||
     input.life === undefined ||
     input.strength === undefined ||
