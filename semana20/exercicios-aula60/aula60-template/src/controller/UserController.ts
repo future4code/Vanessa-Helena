@@ -1,7 +1,5 @@
 import { Request, Response } from "express";
 import userBusiness from "../business/UserBusiness";
-import { User } from "../model/User";
-
 
 export class UserController {
   public async signup(req: Request, res: Response) {
@@ -32,22 +30,16 @@ export class UserController {
     }
   }
 
-  public async getUserById(
-  req: Request,
-  res: Response
-) {
-   try {
-      const input: User = {id: req.params.id, token: req.headers.authorization!}
-
-      const User = await userBusiness.getUserById(input)
-
-      res.status(200).send({message: "Friend added!", user})
-
+  public async profile(req: Request, res: Response) {
+    try {
+      const { id } = req.params;
+      const result = await userBusiness.profile(id);
+      res.status(200).send(result);
     } catch (error) {
-      res.status(400).send({ message: error.message });
+      const { statusCode, message } = error;
+      res.status(statusCode || 400).send({ message });
     }
   }
 }
-
 
 export default new UserController();

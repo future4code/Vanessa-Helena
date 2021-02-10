@@ -4,7 +4,6 @@ import userDatabase  from "../data/UserDatabase";
 import hashGenerator from "../services/hashGenerator";
 import idGenerator from "../services/idGenerator";
 import tokenGenerator from "../services/tokenGenerator";
-import { NotFoundError } from "../errors/NotFoundError";
 
 export class UserBusiness {
    userDatabase: any;
@@ -85,23 +84,30 @@ export class UserBusiness {
       }
    }
    
-      public async getUserById(id: string) {
-         const user = await this.userDatabase.getUserById(id);
-      
-         if (!user) {
-            throw new NotFoundError("User not found");
+   public async profile(id:string) {
 
+      try {
+
+         const userInfo: User | undefined = await this.userDatabase.getUserById(id);
+
+         if (!userInfo) {
+            throw new CustomError(404, "Not found id");
          }
-      
-         return {
-           id: user.getId(),
-           name: user.getName(),
-           nickname: user.getNickname(),
-           email: user.getEmail(),
-           role: user.getRole(),
+
+         return { 
+            id: userInfo.getId(),
+            name: userInfo.getName(),
+            nickname: userInfo.getNickname(),
+            email: userInfo.getEmail(),
+            role: userInfo.getRole()   
+
          };
-       }
+
+      } catch (error) {
+         throw new CustomError(error.statusCode, error.message)
+      }
    }
+}
 
 
 export default new UserBusiness()
